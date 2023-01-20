@@ -6,3 +6,14 @@ config:
   via: nginx
   php: '7.4'
   xdebug: true
+
+services:
+  mailhog:
+    type: mailhog
+    portforward: true
+    hogfrom:
+      - appserver
+
+proxy:
+  mailhog:
+    - mail.testing.lndo.site
