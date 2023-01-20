@@ -1,0 +1,25 @@
+name: wp-{project}
+recipe: wordpress
+config:
+  webroot: web
+  database: mysql
+  via: nginx
+  php: '7.4'
+  xdebug: true
+
+services:
+  mailhog:
+    type: mailhog
+    portforward: true
+    hogfrom:
+      - appserver
+
+proxy:
+  mailhog:
+    - mail.wp-{project}.lndo.site
+
+tooling:
+  install:wordpress:
+    service: appserver
+    cmd:
+      - wp core install --url="http://wp-{project}.lndo.site" --title="{project}" --admin_user=admin --admin_password=password --admin_email=admin@example.org
