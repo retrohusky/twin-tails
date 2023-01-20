@@ -20,6 +20,9 @@ web/.htaccess
 .env.*
 !.env.example
 
+# Lando
+.lando.yml
+
 # Composer
 /vendor
 

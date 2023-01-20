@@ -1,8 +1,0 @@
-name: testing
-recipe: wordpress
-config:
-  webroot: web
-  database: mysql
-  via: nginx
-  php: '7.4'
-  xdebug: true
