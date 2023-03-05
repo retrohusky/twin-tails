@@ -3,8 +3,20 @@ import domReady from '@roots/sage/client/dom-ready';
 /**
  * Application entrypoint
  */
-domReady(async () => {
-  // ...
+domReady(async() => {
+
+    const hamburger = document.querySelector('#hamburger');
+    const mobileMenu = document.querySelector('#mobile-nav');
+    const closeButton = document.querySelector('#close-mobile-nav');
+
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    closeButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
 });
 
 /**
