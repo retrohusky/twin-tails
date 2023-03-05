@@ -1,3 +1,30 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import "common/fonts.css";
+@import "common/gradients.css";
+
+:root {
+  --header-height: 200px;
+  --container-width: 1440px;
+  --border-gradient: linear-gradient(90deg, #E5D074 -1.67%, #FFB6E1 50.23%, #235893 100%) 1;
+  --text-gradient: linear-gradient(180deg, #F7CB29 0.52%, #F7CB29 0.53%, #FB87C7 34.79%, #003D86 66.99%);
+}
+
+html, body, #app {
+  height: 100%;
+  margin: 0;
+}
+
+body, #app {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+footer {
+  flex-shrink: 0;
+}

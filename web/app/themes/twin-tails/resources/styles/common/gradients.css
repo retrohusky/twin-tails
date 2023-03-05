@@ -1,0 +1,19 @@
+.border-bottom-gradient {
+  border-image: var(--border-gradient);
+}
+
+.text-gradient {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient {
+  background: var(--text-gradient);
+}
+
+.current_page_item {
+  border-bottom: 5px solid;
+  border-image: var(--border-gradient);
+}

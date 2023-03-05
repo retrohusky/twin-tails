@@ -1,6 +1,7 @@
 {
   "name": "sage",
   "private": true,
+  "version": "0.1.0",
   "browserslist": [
     "extends @roots/browserslist-config"
   ],
