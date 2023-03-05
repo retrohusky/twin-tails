@@ -1161,19 +1161,14 @@
       "customFontSize": false,
       "fontFamilies": [
         {
-          "name": "Ui-sans-serif",
-          "slug": "sans",
-          "fontFamily": "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\""
+          "name": "Just Another Hand",
+          "slug": "another-hand",
+          "fontFamily": "Just Another Hand,cursive"
         },
         {
-          "name": "Ui-serif",
-          "slug": "serif",
-          "fontFamily": "ui-serif,Georgia,Cambria,\"Times New Roman\",Times,serif"
-        },
-        {
-          "name": "Ui-monospace",
-          "slug": "mono",
-          "fontFamily": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace"
+          "name": "JejuGothic",
+          "slug": "jeju-gothic",
+          "fontFamily": "JejuGothic,sans-serif"
         }
       ],
       "fontSizes": [
