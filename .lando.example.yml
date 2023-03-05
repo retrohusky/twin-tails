@@ -1,10 +1,10 @@
-name: wp-{project}
+name: wp-twin-tails
 recipe: wordpress
 config:
   webroot: web
   database: mysql
   via: nginx
-  php: '7.4'
+  php: '8.0'
   xdebug: true
 
 services:
@@ -16,10 +16,10 @@ services:
 
 proxy:
   mailhog:
-    - mail.wp-{project}.lndo.site
+    - mail.wp-twin-tails.lndo.site
 
 tooling:
   install:wordpress:
     service: appserver
     cmd:
-      - wp core install --url="http://wp-{project}.lndo.site" --title="{project}" --admin_user=admin --admin_password=password --admin_email=admin@example.org
+      - wp core install --url="http://wp-twin-tails.lndo.site" --title="twin-tails" --admin_user=admin --admin_password=password --admin_email=admin@example.org
