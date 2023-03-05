@@ -5,7 +5,7 @@
 @include('sections.header')
 
   <main id="main" class="main flex justify-center">
-    <div class="max-w-container">
+    <div class="max-w-container w-full mx-12">
       @yield('content')
     </div>
   </main>
