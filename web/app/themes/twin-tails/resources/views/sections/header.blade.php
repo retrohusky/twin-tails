@@ -70,9 +70,9 @@
          alt="Koharu character standing">
 
     <div id="hamburger" class="desktop:hidden flex flex-col justify-around w-6 h-6 cursor-pointer">
-      <div class="w-full h-px bg-black"></div>
-      <div class="w-full h-px bg-black"></div>
-      <div class="w-full h-px bg-black"></div>
+      <div class="w-full h-1 bg-black"></div>
+      <div class="w-full h-1 bg-black"></div>
+      <div class="w-full h-1 bg-black"></div>
     </div>
 
     @if(has_nav_menu('primary_navigation'))
