@@ -2,6 +2,12 @@
 module.exports = {
   content: ['./index.php', './app/**/*.php', './resources/**/*.{php,vue,js}'],
   theme: {
+    screens: {
+      'mobile': '320px',
+      'tablet': '768px',
+      'desktop': '1024px',
+      'desktop-lg': '1440px',
+    },
     fontFamily : {
       'another-hand' : ['Just Another Hand', 'cursive'],
       'jeju-gothic' : ['JejuGothic', 'sans-serif'],
