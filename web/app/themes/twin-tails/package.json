@@ -1,7 +1,7 @@
 {
   "name": "sage",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "browserslist": [
     "extends @roots/browserslist-config"
   ],
@@ -25,6 +25,7 @@
     "@roots/sage": "6.8.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "swiper": "^9.1.0"
   }
 }
