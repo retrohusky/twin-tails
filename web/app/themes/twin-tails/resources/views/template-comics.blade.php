@@ -7,7 +7,7 @@
 @section('content')
   @if(!empty($volumes))
     <div>
-      <ol>
+      <ol class="tt-volume-list">
         @foreach($volumes as /** @var WP_Term $volume */ $volume)
           <li>
             <a href="{{ get_term_link($volume) }}">

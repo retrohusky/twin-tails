@@ -46,10 +46,9 @@ class ComicService
                     'item_updated' => __('Chapter updated.'),
                 ],
                 'public' => true,
-                'hierarchical' => false,
                 'has_archive' => true,
                 'show_in_rest' => true,
-                'rewrite' => ['slug' => 'chapters'],
+                'rewrite' => ['slug' => 'chapters', 'with_front' => false],
                 'supports' => ['title', 'thumbnail',],
                 'taxonomies' => ['volume'],
             ]);
@@ -83,9 +82,9 @@ class ComicService
                     'back_to_items' => __('&larr; Back to Volumes'),
                 ],
                 'public' => true,
-                'hierarchical' => true,
+                'hierarchical' => false,
                 'show_in_rest' => true,
-                'rewrite' => ['slug' => 'volumes'],
+                'rewrite' => ['slug' => 'volumes', 'with_front' => false],
                 'show_admin_column' => true,
             ]);
         });
