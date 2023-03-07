@@ -1,0 +1,12 @@
+.tt-block-text-with-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 calculateRem(32px);
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    gap: calculateRem(100px);
+  }
+  margin-bottom: calculateRem(50px);
+}

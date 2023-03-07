@@ -6,6 +6,10 @@
 @import "common/gradients";
 @import "layout/header";
 
+@import "blocks/text-with-image";
+
+@import "pages/about";
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -35,6 +39,8 @@ body, #app {
 
 .main {
   flex-grow: 1;
+  max-width: $desktop;
+  margin: calculateRem(50px) auto;
 }
 
 footer {

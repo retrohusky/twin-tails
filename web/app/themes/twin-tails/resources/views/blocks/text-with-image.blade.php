@@ -1,9 +1,11 @@
 @php use Illuminate\Support\Arr; @endphp
-  <div class="flex flex-col desktop:flex-row desktop:items-center gap-24">
-    <div class="w-full desktop:w-1/2 flex justify-center items-center">
+  <div class="tt-block tt-block-text-with-image">
+
+    <div class="tt-block-text-with-image__image">
       <img src="{{ Arr::get($blockData, 'image.url' ) }}" alt="">
     </div>
-    <div class="w-full desktop:w-1/2">
+
+    <div class="tt-block-text-with-image__content">
 
       @if(Arr::has($blockData, 'content.title') && Arr::get($blockData, 'content.title' ) !== '')
         <h2 class="h2">

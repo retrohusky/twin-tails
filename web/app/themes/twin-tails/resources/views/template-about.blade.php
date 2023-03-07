@@ -6,8 +6,6 @@
 
 @section('content')
 
-  <div class="tt-about flex flex-col mt-20">
-    @php(the_content())
-  </div>
+  @php(the_content())
 
 @endsection

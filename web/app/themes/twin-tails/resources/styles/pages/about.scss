@@ -1,0 +1,8 @@
+
+.page-template-template-about {
+  @media screen and (min-width: $desktop) {
+    .tt-block-text-with-image:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+}
