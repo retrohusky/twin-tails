@@ -4,10 +4,8 @@
 
 @include('sections.header')
 
-  <main id="main" class="main flex justify-center">
-    <div class="max-w-container">
+  <main id="main" class="main">
       @yield('content')
-    </div>
   </main>
 
   @hasSection('sidebar')
