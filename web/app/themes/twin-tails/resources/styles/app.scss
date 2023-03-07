@@ -1,0 +1,75 @@
+@import "normalize.css";
+@import "common/functions";
+@import "common/variables";
+@import "common/extends";
+@import "common/fonts";
+@import "common/gradients";
+@import "layout/header";
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+html, body, #app {
+  height: 100%;
+  margin: 0;
+}
+
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body, #app {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.h1 {
+  @extend %text-gradient;
+  font-family: $font-just-another-hand;
+  font-weight: 400;
+
+  font-size: calculateRem(64px);
+  line-height: calculateRem(64px);
+
+  @media screen and (min-width: $desktop) {
+    font-size: calculateRem(128px);
+    line-height: calculateRem(128px);
+  }
+}
+
+.h2 {
+  font-size: calculateRem(40px);
+  line-height: calculateRem(40px);
+  font-family: $font-just-another-hand;
+  font-weight: 400;
+  margin-bottom: calculateRem(20px);
+}
+
+.p {
+  font-size: calculateRem(25px);
+  line-height: calculateRem(25px);
+  font-family: $font-jeju-gothic;
+}

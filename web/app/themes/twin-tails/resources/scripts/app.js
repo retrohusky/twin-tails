@@ -5,17 +5,14 @@ import domReady from '@roots/sage/client/dom-ready';
  */
 domReady(async() => {
 
-    const hamburger = document.querySelector('#hamburger');
-    const mobileMenu = document.querySelector('#mobile-nav');
-    const closeButton = document.querySelector('#close-mobile-nav');
+    const hamburger = document.querySelector('#tt-header__hamburger');
 
-    hamburger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    closeButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('tt-header__hamburger--active');
+            document.querySelector('.tt-menu__nav').classList.toggle('tt-menu__nav--active');
+        });
+    }
 
 });
 
