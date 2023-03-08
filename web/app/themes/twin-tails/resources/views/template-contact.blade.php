@@ -5,5 +5,7 @@
 @extends('layouts.app')
 
 @section('content')
-  {!! $contactForm  !!}
+  <div class="tt-contact-form">
+    {!! $contactForm  !!}
+  </div>
 @endsection
