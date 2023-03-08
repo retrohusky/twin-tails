@@ -11,7 +11,7 @@
         @foreach($volumes as /** @var WP_Term $volume */ $volume)
           <li>
             <a href="{{ get_term_link($volume) }}">
-              <img src="{{ get_field('cover', $volume)['url'] }}" alt="{{ $volume->name }}">
+              <img class="tt-cover" src="{{ get_field('cover', $volume)['url'] }}" alt="{{ $volume->name }}">
             </a>
           </li>
         @endforeach

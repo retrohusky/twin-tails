@@ -8,13 +8,6 @@ namespace App;
 
 use function Roots\bundle;
 
-function acf_block_render_callback($block)
-{
-    $slug = str_replace('acf/', '', $block['name']);
-
-    echo \Roots\view("blocks/${slug}", $block);
-}
-
 
 /**
  * Register the theme assets.
