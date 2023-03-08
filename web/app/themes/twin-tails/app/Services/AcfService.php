@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use Roots\WPConfig\Config;
+
 class AcfService
 {
     public function __construct()
@@ -14,27 +16,27 @@ class AcfService
     {
         acf_register_block_type([
             'name' => 'text-with-image',
-            'title' => __('Text with image', _THEME_DOMAIN_),
+            'title' => __('Text with image'),
             'description' => '',
             'supports' => [
                 'align' => false,
                 'mode' => false,
                 'jsx' => false,
             ],
-            'render_callback' => '\App\acf_block_render_callback',
+            'render_callback' => [$this, 'renderCallback'],
             'mode' => 'edit'
         ]);
 
         acf_register_block_type([
             'name' => 'text',
-            'title' => __('Text', _THEME_DOMAIN_),
+            'title' => __('Text'),
             'description' => '',
             'supports' => [
                 'align' => false,
                 'mode' => false,
                 'jsx' => false,
             ],
-            'render_callback' => '\App\acf_block_render_callback',
+            'render_callback' => [$this, 'renderCallback'],
             'mode' => 'edit'
         ]);
     }
@@ -49,5 +51,12 @@ class AcfService
                 'core/heading',
             ];
         }, 20, 2);
+    }
+
+    public function renderCallback($block)
+    {
+        $slug = str_replace('acf/', '', $block['name']);
+
+        echo \Roots\view("blocks/${slug}", $block);
     }
 }

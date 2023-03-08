@@ -85,6 +85,10 @@ a {
   }
 }
 
+.tt-cover {
+  max-width: 290px;
+}
+
 .h2 {
   font-size: calculateRem(40px);
   line-height: calculateRem(40px);

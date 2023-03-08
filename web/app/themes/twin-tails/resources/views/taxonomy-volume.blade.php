@@ -8,7 +8,7 @@
         @foreach($chapters as /** @var WP_Post $chapter */ $chapter)
           <li>
             <a href="{{ get_permalink($chapter) }}">
-              <img src="{{ get_the_post_thumbnail_url( $chapter ) }}" alt="{{ $chapter->post_title }}">
+              <img class="tt-cover" src="{{ get_the_post_thumbnail_url( $chapter ) }}" alt="{{ $chapter->post_title }}">
             </a>
           </li>
         @endforeach

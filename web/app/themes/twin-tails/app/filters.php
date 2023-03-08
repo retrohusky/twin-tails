@@ -15,30 +15,6 @@ add_filter('excerpt_more', function () {
     return sprintf(' &hellip; <a href="%s">%s</a>', get_permalink(), __('Continued', 'sage'));
 });
 
-function custom_chapter_permalink_structure($permalink, $post, $leavename)
-{
-    if ($post->post_type === 'chapter' && ! empty($post->post_name)) {
-        $terms = wp_get_post_terms($post->ID, 'volume');
-        if (! empty($terms) && ! is_wp_error($terms)) {
-            $volume_slug = $terms[0]->slug;
-            $permalink = str_replace('%volume%', $volume_slug, $permalink);
-            $permalink = str_replace('%postname%', $post->post_name, $permalink);
-        }
-    }
-    return $permalink;
-}
-add_filter('post_type_link', 'App\custom_chapter_permalink_structure', 10, 3);
-
-function custom_chapter_rewrite_rule()
-{
-    add_rewrite_rule(
-        '^volumes/([^/]*)/([^/]*)/?',
-        'index.php?chapter=$matches[2]&volume=$matches[1]',
-        'top'
-    );
-}
-add_action('init', 'App\custom_chapter_rewrite_rule');
-
 
 
 add_action('admin_init', function () {
