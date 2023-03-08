@@ -1,0 +1,5 @@
+.tt-footer {
+  height: $header-height;
+  border-bottom: calculateRem(15px) solid;
+  border-image: $border-gradient;
+}
