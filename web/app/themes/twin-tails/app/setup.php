@@ -8,6 +8,14 @@ namespace App;
 
 use function Roots\bundle;
 
+function acf_block_render_callback($block)
+{
+    $slug = str_replace('acf/', '', $block['name']);
+
+    echo \Roots\view("blocks/${slug}", $block);
+}
+
+
 /**
  * Register the theme assets.
  *
@@ -32,6 +40,7 @@ add_action('enqueue_block_editor_assets', function () {
  * @return void
  */
 add_action('after_setup_theme', function () {
+
     /**
      * Enable features from the Soil plugin if activated.
      *

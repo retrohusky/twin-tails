@@ -1,6 +1,7 @@
 {
   "name": "roots/sage",
   "type": "wordpress-theme",
+  "version": "0.2.0",
   "license": "MIT",
   "description": "WordPress starter theme with a modern development workflow",
   "homepage": "https://roots.io/sage/",
@@ -64,7 +65,9 @@
   "extra": {
     "acorn": {
       "providers": [
-        "App\\Providers\\ThemeServiceProvider"
+        "App\\Providers\\ThemeServiceProvider",
+        "App\\Providers\\AcfServiceProvider",
+        "App\\Providers\\ComicServiceProvider"
       ]
     }
   }

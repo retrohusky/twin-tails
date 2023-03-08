@@ -1,0 +1,32 @@
+.tt-contact-form {
+  padding: 0 calculateRem(10px);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  .wpcf7-not-valid-tip {
+    margin-top: calculateRem(10px);
+  }
+
+  .wpcf7-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input, textarea {
+    margin-top: calculateRem(10px);
+    padding: calculateRem(10px);
+    border-radius: calculateRem(20px);
+    border: none;
+    background: $pink;
+  }
+
+  input[type="submit"] {
+    padding: calculateRem(10px) calculateRem(20px);
+    cursor: pointer;
+  }
+
+  label {
+    margin-bottom: calculateRem(10px);
+  }
+}

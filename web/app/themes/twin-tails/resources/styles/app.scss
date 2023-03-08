@@ -1,0 +1,99 @@
+@import "normalize.css";
+
+@import '~swiper/scss'; // Base styles
+@import '~swiper/scss/navigation'; // Navigation arrows
+@import '~swiper/scss/pagination'; // Pagination bullets
+
+@import "common/functions";
+@import "common/variables";
+@import "common/extends";
+@import "common/fonts";
+@import "common/gradients";
+@import "layout/header";
+@import "layout/footer";
+
+@import "blocks/text-with-image";
+
+@import "pages/about";
+@import "pages/comics";
+@import "pages/updates";
+@import "pages/contact";
+
+.tt-swiper-container {
+  overflow-x: hidden;
+
+  .swiper-wrapper {
+    overflow: visible;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  font-family: $font-jeju-gothic;
+}
+
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body, #app {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+  max-width: $desktop;
+  margin: calculateRem(50px) auto;
+  width: 100%;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.h1 {
+  @extend %text-gradient;
+  font-family: $font-just-another-hand;
+  font-weight: 400;
+
+  font-size: calculateRem(64px);
+  line-height: calculateRem(64px);
+
+  @media screen and (min-width: $desktop) {
+    font-size: calculateRem(128px);
+    line-height: calculateRem(128px);
+  }
+}
+
+.h2 {
+  font-size: calculateRem(40px);
+  line-height: calculateRem(40px);
+  font-family: $font-just-another-hand;
+  font-weight: 400;
+  margin-bottom: calculateRem(20px);
+}
+
+.p {
+  font-size: calculateRem(25px);
+  line-height: calculateRem(25px);
+}
