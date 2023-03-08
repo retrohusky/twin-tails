@@ -2,7 +2,7 @@
   <div class="tt-block tt-block-text-with-image">
 
     <div class="tt-block-text-with-image__image">
-      <img src="{{ Arr::get($blockData, 'image.url' ) }}" alt="">
+      <img class="tt-cover" src="{{ Arr::get($blockData, 'image.url' ) }}" alt="">
     </div>
 
     <div class="tt-block-text-with-image__content">
