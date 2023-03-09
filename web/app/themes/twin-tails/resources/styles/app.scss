@@ -9,6 +9,7 @@
 @import "common/extends";
 @import "common/fonts";
 @import "common/gradients";
+@import "layout/layout";
 @import "layout/header";
 @import "layout/footer";
 
@@ -19,13 +20,7 @@
 @import "pages/updates";
 @import "pages/contact";
 
-.tt-swiper-container {
-  overflow-x: hidden;
-
-  .swiper-wrapper {
-    overflow: visible;
-  }
-}
+@import "vendor/swiper";
 
 .sr-only {
   position: absolute;
@@ -53,6 +48,11 @@ ul, ol, li {
 body, #app {
   display: flex;
   flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .main {
@@ -86,7 +86,9 @@ a {
 }
 
 .tt-cover {
-  max-width: 290px;
+  max-width: calculateRem(450px);
+  border: calculateRem(5px) solid;
+  border-image: $border-gradient;
 }
 
 .h2 {

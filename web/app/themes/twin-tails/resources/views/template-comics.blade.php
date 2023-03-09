@@ -6,7 +6,7 @@
 
 @section('content')
   @if(!empty($volumes))
-    <div>
+    <div class="tt-wrapper">
       <ol class="tt-volume-list">
         @foreach($volumes as /** @var WP_Term $volume */ $volume)
           <li>

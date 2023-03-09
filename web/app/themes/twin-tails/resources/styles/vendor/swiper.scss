@@ -1,0 +1,8 @@
+.tt-swiper-container {
+  overflow-x: hidden;
+  position: relative;
+
+  .swiper-wrapper {
+    overflow: visible;
+  }
+}
