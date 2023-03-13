@@ -9,6 +9,8 @@
 @import "common/extends";
 @import "common/fonts";
 @import "common/gradients";
+@import "common/buttons";
+@import "layout/layout";
 @import "layout/header";
 @import "layout/footer";
 
@@ -19,13 +21,7 @@
 @import "pages/updates";
 @import "pages/contact";
 
-.tt-swiper-container {
-  overflow-x: hidden;
-
-  .swiper-wrapper {
-    overflow: visible;
-  }
-}
+@import "vendor/swiper";
 
 .sr-only {
   position: absolute;
@@ -36,6 +32,10 @@
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html, body, #app {
@@ -53,6 +53,11 @@ ul, ol, li {
 body, #app {
   display: flex;
   flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .main {
@@ -86,7 +91,10 @@ a {
 }
 
 .tt-cover {
-  max-width: 290px;
+  max-width: calculateRem(450px);
+  width: 100%;
+  border: calculateRem(5px) solid;
+  border-image: $border-gradient;
 }
 
 .h2 {
@@ -94,10 +102,10 @@ a {
   line-height: calculateRem(40px);
   font-family: $font-just-another-hand;
   font-weight: 400;
-  margin-bottom: calculateRem(20px);
+  margin: calculateRem(32px) 0;
 }
 
-.p {
+p {
   font-size: calculateRem(25px);
-  line-height: calculateRem(25px);
+  line-height: calculateRem(40px);
 }

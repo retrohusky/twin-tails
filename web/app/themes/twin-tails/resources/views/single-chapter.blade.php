@@ -4,11 +4,26 @@
  * Template Post Type: chapter
  */
 
+/** @var WP_Term $volume */
+
 ?>
 
 @extends('layouts.app')
 
 @section('content')
+
+  <div class="text-center">
+    <a class="tt-btn"
+      href="{{ get_term_link( $volume->term_id ) }}">
+      << Chapter List
+    </a>
+  </div>
+
+  <div>
+    <h2 class="text-center h2">
+      {{ $chapter->post_title }}
+    </h2>
+  </div>
 
   <div class="tt-swiper-container">
     <!-- Additional required wrapper -->

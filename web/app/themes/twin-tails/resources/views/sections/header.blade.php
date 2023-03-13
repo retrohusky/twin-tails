@@ -1,6 +1,6 @@
 <header class="tt-header">
 
-  <div class="tt-header__wrapper">
+  <div class="tt-wrapper tt-header__wrapper">
 
     <img class="tt-header__kitsune" width="85" src="@asset('images/tamako-header.png')"
          alt="Tamako character standing">

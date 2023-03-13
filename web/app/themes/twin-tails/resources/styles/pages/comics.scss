@@ -1,8 +1,5 @@
-.page-template-template-comics {
-  .tt-volume-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: calculateRem(20px);
-    padding: 0 calculateRem(20px);
-  }
+.tt-volume-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calculateRem(20px);
 }

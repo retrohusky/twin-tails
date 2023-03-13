@@ -13,7 +13,7 @@
         </h2>
       @endif
 
-      <p class="p">
+      <p>
         {!! Arr::get($blockData, 'content.paragraph' ) !!}
       </p>
 
