@@ -7,6 +7,14 @@
   @media screen and (min-width: $desktop) {
     flex-direction: row;
     gap: calculateRem(100px);
+
+    .tt-block-text-with-image__image {
+      flex: 1;
+    }
+
+    .tt-block-text-with-image__content {
+      flex: 2;
+    }
   }
   margin-bottom: calculateRem(50px);
 }
