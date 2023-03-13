@@ -1,0 +1,16 @@
+.single-chapter {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.tt-swiper-container {
+  overflow-x: hidden;
+  position: relative;
+
+  .swiper-wrapper {
+    overflow: visible;
+  }
+}
