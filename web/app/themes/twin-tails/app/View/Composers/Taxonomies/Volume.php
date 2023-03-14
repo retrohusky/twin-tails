@@ -28,6 +28,8 @@ class Volume extends Composer
         return get_posts([
             'post_type' => 'chapter',
             'posts_per_page' => -1,
+            'orderby' => 'menu_order',
+            'order' => 'ASC',
             'tax_query' => [
                 [
                     'taxonomy' => 'volume',
