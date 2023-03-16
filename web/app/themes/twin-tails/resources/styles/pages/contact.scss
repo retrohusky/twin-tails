@@ -1,19 +1,29 @@
 .tt-contact-form {
   padding: 0 calculateRem(10px);
   display: flex;
+  flex-direction: column;
   width: 100%;
-  justify-content: center;
+  align-items: center;
 
-  .wpcf7-not-valid-tip {
-    margin-top: calculateRem(10px);
+  &__kitsune {
+    width: calculateRem(400px);
   }
 
-  .wpcf7-form {
+  &__container {
+    width: 100%;
+    padding: calculateRem(20px);
+    border: 1px solid;
+    border-radius: calculateRem(20px);
+    border-image: $border-gradient;
+    max-width: calculateRem(400px);
+  }
+
+  .forminator-field {
     display: flex;
     flex-direction: column;
   }
 
-  input, textarea {
+  input, textarea, button {
     margin-top: calculateRem(10px);
     padding: calculateRem(10px);
     border-radius: calculateRem(20px);
@@ -21,9 +31,25 @@
     background: $pink;
   }
 
-  input[type="submit"] {
+  .forminator-required {
+    color: $pink;
+  }
+
+  .forminator-button-submit {
     padding: calculateRem(10px) calculateRem(20px);
     cursor: pointer;
+  }
+
+  .forminator-error-message {
+    color: red;
+    font-size: calculateRem(12px);
+    margin-top: calculateRem(10px);
+  }
+
+  .forminator-description {
+    margin-top: calculateRem(10px);
+    font-size: calculateRem(12px);
+    align-self: flex-end;
   }
 
   label {

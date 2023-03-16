@@ -19,6 +19,6 @@ class Contact extends Composer
 
     private function contactForm(): string
     {
-        return do_shortcode('[contact-form-7 id="69" title="Main"]');
+        return do_shortcode('[forminator_form id="842"]');
     }
 }
