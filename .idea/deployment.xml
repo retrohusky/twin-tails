@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Prod" remoteFilesAllowedToDisappearOnAutoupload="false" />
+  <component name="PublishConfigData" serverName="Prod" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+    <option name="confirmBeforeUploading" value="false" />
+    <serverData>
+      <paths name="Prod">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/wp-content/themes/twin-tails" local="$PROJECT_DIR$/web/app/themes/twin-tails" web="" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
 </project>

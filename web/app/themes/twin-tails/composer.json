@@ -1,7 +1,7 @@
 {
   "name": "roots/sage",
   "type": "wordpress-theme",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "license": "MIT",
   "description": "WordPress starter theme with a modern development workflow",
   "homepage": "https://roots.io/sage/",
