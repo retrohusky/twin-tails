@@ -54,6 +54,14 @@ ul, ol, li {
 body, #app {
   display: flex;
   flex-direction: column;
+
+  background-color: var(--color-bg, var(--color-bg-light));
+  color: var(--color-text, var(--color-text-light));
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-dark);
+  }
 }
 
 img {
@@ -74,7 +82,12 @@ footer {
 
 a {
   text-decoration: none;
-  color: inherit;
+
+  color: var(--color-text, var(--color-text-light));
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-text-dark);
+  }
 }
 
 .h1 {
@@ -109,4 +122,10 @@ a {
 p {
   font-size: calculateRem(25px);
   line-height: calculateRem(40px);
+}
+
+.tt-dark-mode {
+  width: calculateRem(50px);
+  height: calculateRem(50px);
+  border-radius: 100%;
 }

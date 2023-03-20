@@ -36,6 +36,26 @@ domReady(async() => {
         },
     });
 
+    // Darkmode
+
+  const toggleDarkModeButton = document.getElementById("tt-darkmode-toggle");
+  const body = document.body;
+
+  // Apply the user's preference from localStorage
+  const storedTheme = localStorage.getItem("dark-mode");
+  if (storedTheme === "true") {
+    body.classList.add("dark-theme");
+  } else {
+    body.classList.remove("dark-theme");
+  }
+
+  // Toggle the theme
+
+  toggleDarkModeButton.addEventListener("click", () => {
+    body.classList.toggle("dark-theme");
+    localStorage.setItem("dark-mode", body.classList.contains("dark-theme"));
+  });
+
 });
 
 /**

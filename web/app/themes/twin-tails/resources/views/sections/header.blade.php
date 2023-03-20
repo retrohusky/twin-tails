@@ -13,6 +13,10 @@
         {!! $siteName !!}
       </a>
 
+      <button class="tt-dark-mode" id="tt-darkmode-toggle">
+
+      </button>
+
       @if (has_nav_menu('primary_navigation'))
         <nav class="tt-menu__nav" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
           {!!
