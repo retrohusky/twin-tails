@@ -5,6 +5,7 @@
  */
 
 /** @var WP_Term $volume */
+/** @var array $comic */
 
 ?>
 
@@ -14,7 +15,7 @@
 
   <div class="text-center">
     <a class="tt-btn"
-      href="{{ get_term_link( $volume->term_id ) }}">
+       href="{{ get_term_link( $volume->term_id ) }}">
       << Chapter List
     </a>
   </div>
@@ -29,12 +30,13 @@
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
-      @foreach($comic as $i => $page)
-        <div class="swiper-slide">
-          <img src="{{ $page }}" alt="Page {{$i}}">
-        </div>
-      @endforeach
-      ...
+      @if($comic)
+        @foreach($comic as $i => $page)
+          <div class="swiper-slide">
+            <img src="{{ $page }}" alt="Page {{$i}}">
+          </div>
+        @endforeach
+      @endif
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
