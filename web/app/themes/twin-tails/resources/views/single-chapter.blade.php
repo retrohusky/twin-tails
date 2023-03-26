@@ -7,17 +7,34 @@
 /** @var WP_Term $volume */
 /** @var array $comic */
 
+$nextChapter = get_previous_post();
+$prevChapter = get_next_post();
 ?>
 
 @extends('layouts.app')
 
 @section('content')
 
-  <div class="text-center">
+  <div class="single-chapter__interface">
+
+    @if($prevChapter)
+      <a class="tt-btn"
+         href="{{ get_permalink($prevChapter->ID) }}">
+        << {{ $prevChapter->post_title }}
+      </a>
+    @endif
+
     <a class="tt-btn"
        href="{{ get_term_link( $volume->term_id ) }}">
-      << Chapter List
+      Chapter List
     </a>
+
+    @if($nextChapter)
+      <a class="tt-btn"
+         href="{{ get_permalink($nextChapter->ID) }}">
+        {{ $nextChapter->post_title }} >>
+      </a>
+    @endif
   </div>
 
   <div>
