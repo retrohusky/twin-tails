@@ -1,5 +1,4 @@
-.single-chapter {
-  &__interface {
+.pagination {
     display: flex;
     flex-direction: column;
     gap: calculateRem(10px);
@@ -7,7 +6,5 @@
     @media screen and (min-width: $desktop) {
       justify-content: space-between;
       flex-direction: row;
-    }
-
   }
 }

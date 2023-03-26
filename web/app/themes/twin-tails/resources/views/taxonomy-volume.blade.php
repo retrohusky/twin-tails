@@ -1,5 +1,10 @@
 <?php
 /** @var WP_Term $volume */
+
+use App\View\Composers\Taxonomies\Volume;
+
+$prevVolume = Volume::getAdjacent($volume, 'volume', true);
+$nextVolume = Volume::getAdjacent($volume, 'volume', false);
 ?>
 
 @extends('layouts.app')
@@ -8,11 +13,25 @@
 
   @if(!empty($chapters))
     <div class="tt-wrapper">
-      <div class="text-center">
+      <div class="pagination">
+
+        @if($prevVolume)
+          <a class="tt-btn"
+             href="{{ get_term_link( $prevVolume->term_id ) }}">
+            << {{ $prevVolume->name }}
+          </a>
+        @endif
         <a class="tt-btn"
            href="{{ get_permalink( get_page_by_title('comics') ) }}">
-          << Volume List
+          Volume List
         </a>
+
+        @if($nextVolume)
+          <a class="tt-btn"
+             href="{{ get_term_link( $nextVolume->term_id ) }}">
+            {{ $nextVolume->name }} >>
+          </a>
+        @endif
       </div>
       <h2 class="h2 text-center">{{ $volume->name }}</h2>
       <ol class="tt-volume-list">

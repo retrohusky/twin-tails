@@ -15,7 +15,7 @@ $prevChapter = get_next_post();
 
 @section('content')
 
-  <div class="single-chapter__interface">
+  <div class="pagination">
 
     @if($prevChapter)
       <a class="tt-btn"

@@ -39,4 +39,24 @@ class Volume extends Composer
             ],
         ]);
     }
+
+    static public function getAdjacent($term, $taxonomy, $previous = true) {
+        $terms = get_terms([
+            'taxonomy'   => $taxonomy,
+            'hide_empty' => false,
+            'orderby'    => 'term_id',
+        ]);
+
+        $current_index = array_search($term->term_id, wp_list_pluck($terms, 'term_id'), true);
+
+        if (false === $current_index) {
+            return null;
+        }
+
+        if ($previous) {
+            return $current_index > 0 ? $terms[$current_index - 1] : null;
+        } else {
+            return $current_index < count($terms) - 1 ? $terms[$current_index + 1] : null;
+        }
+    }
 }
