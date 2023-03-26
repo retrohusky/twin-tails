@@ -5,18 +5,36 @@
  */
 
 /** @var WP_Term $volume */
+/** @var array $comic */
 
+$nextChapter = get_previous_post();
+$prevChapter = get_next_post();
 ?>
 
 @extends('layouts.app')
 
 @section('content')
 
-  <div class="text-center">
+  <div class="pagination">
+
+    @if($prevChapter)
+      <a class="tt-btn"
+         href="{{ get_permalink($prevChapter->ID) }}">
+        << {{ $prevChapter->post_title }}
+      </a>
+    @endif
+
     <a class="tt-btn"
-      href="{{ get_term_link( $volume->term_id ) }}">
-      << Chapter List
+       href="{{ get_term_link( $volume->term_id ) }}">
+      Chapter List
     </a>
+
+    @if($nextChapter)
+      <a class="tt-btn"
+         href="{{ get_permalink($nextChapter->ID) }}">
+        {{ $nextChapter->post_title }} >>
+      </a>
+    @endif
   </div>
 
   <div>
@@ -29,12 +47,13 @@
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
-      @foreach($comic as $i => $page)
-        <div class="swiper-slide">
-          <img src="{{ $page }}" alt="Page {{$i}}">
-        </div>
-      @endforeach
-      ...
+      @if($comic)
+        @foreach($comic as $i => $page)
+          <div class="swiper-slide">
+            <img src="{{ $page }}" alt="Page {{$i}}">
+          </div>
+        @endforeach
+      @endif
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
