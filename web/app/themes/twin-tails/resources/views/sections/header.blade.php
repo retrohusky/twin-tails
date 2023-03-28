@@ -25,6 +25,7 @@
           'theme_location' => 'primary_navigation',
           'menu_class' => 'tt-menu__ul',
           'echo' => false,
+          'depth' => 2,
           ])
             !!}
         </nav>
