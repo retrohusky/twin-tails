@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Services\AcfService;
 use App\Services\ComicService;
+use App\Services\MediaService;
 use App\Services\RewriteService;
 use Roots\Acorn\Sage\SageServiceProvider;
 
@@ -20,6 +21,7 @@ class ThemeServiceProvider extends SageServiceProvider
         $this->app->singleton('comic', ComicService::class);
         $this->app->singleton('acf', AcfService::class);
         $this->app->singleton('rewrite', RewriteService::class);
+        $this->app->singleton('media', MediaService::class);
     }
 
     /**
@@ -33,5 +35,6 @@ class ThemeServiceProvider extends SageServiceProvider
         $this->app->make('comic');
         $this->app->make('acf');
         $this->app->make('rewrite');
+        $this->app->make('media');
     }
 }
