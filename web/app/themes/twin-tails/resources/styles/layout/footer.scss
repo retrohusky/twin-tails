@@ -1,5 +1,15 @@
 .tt-footer {
-  height: $header-height;
   border-bottom: calculateRem(15px) solid;
   border-image: $border-gradient;
+
+  .tt-wrapper {
+    max-width: $desktop;
+    margin: calculateRem(25px) auto;
+    width: 100%;
+  }
+
+  #newsletter-popup {
+    cursor: pointer;
+    max-width: 300px;
+  }
 }
