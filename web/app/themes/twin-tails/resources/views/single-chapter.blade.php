@@ -43,6 +43,16 @@ $prevChapter = get_next_post();
     </h2>
   </div>
 
+  <div>
+    <label for="view_mode">
+        View Mode
+    </label>
+    <select id="view_mode" name="view-mode">
+      <option value="fit-height">Fit Window Height</option>
+      <option value="full">Full</option>
+    </select>
+  </div>
+
   <div class="tt-swiper-container">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">

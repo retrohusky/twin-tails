@@ -18,7 +18,7 @@ domReady(async() => {
 
 
     const swiper = new Swiper('.tt-swiper-container', {
-      modules: [Navigation, Pagination],
+        modules: [Navigation, Pagination],
         slidesPerView: 1,
         spaceBetween: 0,
         loop: false,
@@ -27,6 +27,7 @@ domReady(async() => {
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+            type: "fraction"
         },
 
       // Navigation arrows
@@ -43,18 +44,18 @@ domReady(async() => {
 
   // Apply the user's preference from localStorage
   const storedTheme = localStorage.getItem("dark-mode");
-  if (storedTheme === "true") {
+if (storedTheme === "true") {
     body.classList.add("dark-theme");
-  } else {
+} else {
     body.classList.remove("dark-theme");
-  }
+}
 
   // Toggle the theme
 
   toggleDarkModeButton.addEventListener("click", () => {
-    body.classList.toggle("dark-theme");
-    localStorage.setItem("dark-mode", body.classList.contains("dark-theme"));
-  });
+        body.classList.toggle("dark-theme");
+        localStorage.setItem("dark-mode", body.classList.contains("dark-theme"));
+    });
 
 });
 
