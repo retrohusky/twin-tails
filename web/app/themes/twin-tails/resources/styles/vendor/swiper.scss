@@ -31,3 +31,11 @@
     text-shadow: 1px 1px 1px #000;
   }
 }
+
+.fit-height-mode {
+  max-height: 100vh;
+}
+
+.full-mode {
+  max-height: initial;
+}

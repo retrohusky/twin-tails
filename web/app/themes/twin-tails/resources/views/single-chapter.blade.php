@@ -44,10 +44,10 @@ $prevChapter = get_next_post();
   </div>
 
   <div>
-    <label for="view_mode">
+    <label for="tt_view_mode">
         View Mode
     </label>
-    <select id="view_mode" name="view-mode">
+    <select id="tt_view_mode" name="view-mode">
       <option value="fit-height">Fit Window Height</option>
       <option value="full">Full</option>
     </select>
