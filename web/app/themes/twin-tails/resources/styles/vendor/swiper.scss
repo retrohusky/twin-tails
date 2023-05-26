@@ -13,4 +13,29 @@
   .swiper-wrapper {
     overflow: visible;
   }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+
+    &__img {
+
+      &--screen-height {
+        max-height: 100vh;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    opacity: .25;
+    text-shadow: 1px 1px 1px #000;
+  }
+}
+
+.fit-height-mode {
+  max-height: 100vh;
+}
+
+.full-mode {
+  max-height: initial;
 }

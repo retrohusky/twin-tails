@@ -22,7 +22,8 @@ class Home extends Composer
         $lastChapter = get_posts([
             'post_type' => 'chapter',
             'posts_per_page' => 1,
-            'orderby' => 'menu_order',
+            'orderby' => 'date',
+            'post_status' => 'publish',
             'order' => 'DESC',
         ]);
 
