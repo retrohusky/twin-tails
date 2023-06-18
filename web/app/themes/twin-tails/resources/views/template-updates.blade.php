@@ -12,12 +12,6 @@
 
 @section('content')
 
-  <div>
-    <h2 class="text-center h2">
-      Updates
-    </h2>
-  </div>
-
   <div class="pagination">
     @if($query->max_num_pages > 1)
       @php

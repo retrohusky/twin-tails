@@ -5,7 +5,6 @@ namespace App\Providers;
 use App\Services\AcfService;
 use App\Services\ComicService;
 use App\Services\MediaService;
-use App\Services\RewriteService;
 use Roots\Acorn\Sage\SageServiceProvider;
 
 class ThemeServiceProvider extends SageServiceProvider
@@ -20,7 +19,6 @@ class ThemeServiceProvider extends SageServiceProvider
         parent::register();
         $this->app->singleton('comic', ComicService::class);
         $this->app->singleton('acf', AcfService::class);
-        $this->app->singleton('rewrite', RewriteService::class);
         $this->app->singleton('media', MediaService::class);
     }
 
@@ -28,13 +26,13 @@ class ThemeServiceProvider extends SageServiceProvider
      * Bootstrap any application services.
      *
      * @return void
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
      */
     public function boot()
     {
         parent::boot();
         $this->app->make('comic');
         $this->app->make('acf');
-        $this->app->make('rewrite');
         $this->app->make('media');
     }
 }

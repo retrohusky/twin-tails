@@ -37,43 +37,14 @@ $prevChapter = get_next_post();
     @endif
   </div>
 
-  <div>
-    <h2 class="text-center h2">
-      {{ $chapter->post_title }}
-    </h2>
-  </div>
 
   <div>
-    <label for="tt_view_mode">
-        View Mode
-    </label>
-    <select id="tt_view_mode" name="view-mode">
-      <option value="fit-height">Fit Window Height</option>
-      <option value="full">Full</option>
-    </select>
-  </div>
-
-  <div class="tt-swiper-container">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      @if($comic)
-        @foreach($comic as $i => $page)
-          <div class="swiper-slide">
-            <img src="{{ $page }}" alt="Page {{$i}}">
+    @if($comic)
+        @foreach ($comic as $page)
+          <div>
+            <img src="{{ $page }}" alt="">
           </div>
         @endforeach
-      @endif
-    </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
+    @endif
   </div>
-
 @endsection

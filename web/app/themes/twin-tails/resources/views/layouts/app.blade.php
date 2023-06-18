@@ -3,17 +3,17 @@
 </a>
 
 
-
 @include('sections.header')
 
-  <main id="main" class="main">
-      @yield('content')
-  </main>
+<main id="main" class="main">
+  @include('partials.page-header')
+  @yield('content')
+</main>
 
-  @hasSection('sidebar')
-    <aside class="sidebar">
-      @yield('sidebar')
-    </aside>
-  @endif
+@hasSection('sidebar')
+  <aside class="sidebar">
+    @yield('sidebar')
+  </aside>
+@endif
 
 @include('sections.footer')

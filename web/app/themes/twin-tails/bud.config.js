@@ -7,15 +7,15 @@
  * @typedef {import('@roots/bud').Bud} Bud
  * @param {Bud} app
  */
-export default async (app) => {
+export default async(app) => {
   /**
    * Application entrypoints
    * @see {@link https://bud.js.org/docs/bud.entry/}
    */
-  app
+    app
     .entry({
-      app: ['@scripts/app', '@styles/app'],
-      editor: ['@scripts/editor', '@styles/editor'],
+        app: ['@scripts/app', '@styles/app'],
+        editor: ['@scripts/editor', '@styles/editor'],
     })
 
     /**
@@ -46,7 +46,7 @@ export default async (app) => {
      * URI of the `public` directory
      * @see {@link https://bud.js.org/docs/bud.setPublicPath/}
      */
-    .setPublicPath('/app/themes/twin-tails/public/')
+    .setPublicPath('/wp-content/themes/twin-tails/public/')
 
     /**
      * Generate WordPress `theme.json`
@@ -57,29 +57,29 @@ export default async (app) => {
      * @see {@link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/}
      */
     .wpjson.settings({
-      color: {
-        custom: false,
-        customDuotone: false,
-        customGradient: false,
-        defaultDuotone: false,
-        defaultGradients: false,
-        defaultPalette: false,
-        duotone: [],
-      },
-      custom: {
-        spacing: {},
-        typography: {
-          'font-size': {},
-          'line-height': {},
+        color: {
+            custom: false,
+            customDuotone: false,
+            customGradient: false,
+            defaultDuotone: false,
+            defaultGradients: false,
+            defaultPalette: false,
+            duotone: [],
         },
-      },
-      spacing: {
-        padding: true,
-        units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
-      },
-      typography: {
-        customFontSize: false,
-      },
+        custom: {
+            spacing: {},
+            typography: {
+                'font-size': {},
+                'line-height': {},
+            },
+        },
+        spacing: {
+            padding: true,
+            units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
+        },
+        typography: {
+            customFontSize: false,
+        },
     })
     .enable();
 };

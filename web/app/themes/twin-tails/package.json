@@ -1,7 +1,6 @@
 {
-  "name": "twin-tails",
+  "name": "sage",
   "private": true,
-  "version": "0.6.0",
   "browserslist": [
     "extends @roots/browserslist-config"
   ],
@@ -21,11 +20,7 @@
   },
   "devDependencies": {
     "@roots/bud": "6.8.0",
-    "@roots/bud-sass": "^6.8.0",
+    "@roots/bud-tailwindcss": "6.8.0",
     "@roots/sage": "6.8.0"
-  },
-  "dependencies": {
-    "normalize.css": "^8.0.1",
-    "swiper": "^9.1.0"
   }
 }
