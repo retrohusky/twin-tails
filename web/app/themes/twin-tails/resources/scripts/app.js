@@ -41,7 +41,6 @@ domReady(async() => {
 
   const masonry = new Masonry(grid, {
     itemSelector: '.tt-grid-item',
-    columntWidth: 200
   });
 
 });
