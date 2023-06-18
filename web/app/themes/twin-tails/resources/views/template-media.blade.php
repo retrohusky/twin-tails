@@ -11,19 +11,13 @@
         @if(!empty($media))
           @foreach(/** @var WP_Post[] $media */ $media as $medium)
             @php
-            $thumbnail = get_field('thumbnail', $medium->ID);
-            $link = get_field('link', $medium->ID);
+            $thumbnail = get_the_post_thumbnail_url($medium->ID, 'large');
             @endphp
             <div class="tt-media-list__item">
               <figure>
-                <a href="{{ $link }}" target="_blank">
-                  <img class="tt-cover" src="{{ Arr::get($thumbnail, 'url') }}" alt="">
+                <a href="{{ get_permalink($medium) }}">
+                  <img class="tt-cover" src="{{ $thumbnail }}" alt="{{$medium->post_title}} thumbnail">
                 </a>
-                <figcaption>
-                  <h3 class="h3">
-                    {{ $medium->post_title }}
-                  </h3>
-                </figcaption>
               </figure>
             </div>
           @endforeach

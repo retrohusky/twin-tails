@@ -1,4 +1,5 @@
 import domReady from '@roots/sage/client/dom-ready';
+import Masonry from 'masonry-layout';
 
 /**
  * Application entrypoint
@@ -33,6 +34,15 @@ domReady(async() => {
         body.classList.toggle("dark-theme");
         localStorage.setItem("dark-mode", body.classList.contains("dark-theme"));
     });
+
+    // Masonry
+
+  const grid = document.querySelector('.tt-grid');
+
+  const masonry = new Masonry(grid, {
+    itemSelector: '.tt-grid-item',
+    columntWidth: 200
+  });
 
 });
 

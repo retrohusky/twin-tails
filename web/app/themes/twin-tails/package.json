@@ -22,5 +22,8 @@
     "@roots/bud": "6.13.1",
     "@roots/bud-sass": "^6.13.1",
     "@roots/sage": "6.13.1"
+  },
+  "dependencies": {
+    "masonry-layout": "^4.2.2"
   }
 }

@@ -157,7 +157,7 @@
       font-size: calculateRem(70px);
 
       @media screen and (min-width: $desktop) {
-        font-size: calculateRem(30px);
+        font-size: calculateRem(24px);
         flex-direction: row;
         align-items: flex-end;
         gap: calculateRem(90px);

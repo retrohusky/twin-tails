@@ -6,6 +6,7 @@
 /** @var WP_Post|null $lastChapter */
 /** @var WP_Post|null $firstChapter */
 /** @var string $mainVideo */
+/** @var string $mediaUrl */
 @endphp
 
 @extends('layouts.app')
@@ -33,7 +34,7 @@
 
       <div>
         <p>
-          Want more? Check our <a class="h2" href="#">media section</a>
+          Want more? Check our <a class="h2" href="{{ $mediaUrl }}">media section</a>
         </p>
       </div>
     </div>

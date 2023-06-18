@@ -1,0 +1,15 @@
+.tt-media {
+  &-list {
+    display: flex;
+    gap: calculateRem(30px);
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+    }
+
+    &__item {
+      width: 100%;
+    }
+  }
+}

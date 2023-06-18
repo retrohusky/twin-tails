@@ -17,6 +17,7 @@ class Home extends Composer
             'lastChapter' => $this->lastChapter(),
             'firstChapter' => $this->firstChapter(),
             'mainVideo' => $this->mainVideo(),
+            'mediaUrl' => get_permalink( get_page_by_path( 'media' ) ),
         ];
     }
 

@@ -27,11 +27,13 @@ class Media extends \Roots\Acorn\View\Composer
 
     private function getMedia()
     {
-        return get_posts([
-            'post_type' => 'video',
-            'posts_per_page' => -1,
-            'orderby' => 'date',
-            'order' => 'DESC',
-        ]);
+        return get_children(
+            [
+                'post_parent' => get_the_ID(),
+                'post_type' => 'page',
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+            ]
+        );
     }
 }
