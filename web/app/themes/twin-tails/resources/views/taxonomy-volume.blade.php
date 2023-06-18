@@ -33,7 +33,7 @@ $nextVolume = Volume::getAdjacent($volume, 'volume', false);
           </a>
         @endif
       </div>
-      <h2 class="h2 text-center">{{ $volume->name }}</h2>
+
       <ol class="tt-volume-list">
         @foreach($chapters as /** @var WP_Post $chapter */ $chapter)
           <li>

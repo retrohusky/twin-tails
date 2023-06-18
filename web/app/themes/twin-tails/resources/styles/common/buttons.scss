@@ -1,6 +1,6 @@
 .tt-btn {
   background: #DEA8D5;
-  border-radius: calculateRem(20px);
+  border-radius: calculateRem(24px);
   color: black;
   font-size: calculateRem(20px);
   padding: calculateRem(10px) calculateRem(20px);
@@ -11,7 +11,7 @@
   }
 
   &--special {
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-style: italic;
 
     @media screen and (min-width: $desktop) {

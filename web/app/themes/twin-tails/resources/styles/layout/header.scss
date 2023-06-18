@@ -1,3 +1,8 @@
+.page-header {
+  display: flex;
+  justify-content: center;
+}
+
 .tt-header {
   border-bottom: 15px solid;
   border-image: $border-gradient;
